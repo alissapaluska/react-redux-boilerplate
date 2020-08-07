@@ -2,6 +2,7 @@ import * as ActionTypes from '../actions'
 import merge from 'lodash/merge'
 import paginate from './paginate'
 import { combineReducers } from 'redux'
+// import languageProviderReducer from '../containers/LanguageProvider/reducer';
 
 // Updates an entity cache in response to any action with response.entities.
 const entities = (state = { users: {}, repos: {} }, action) => {
@@ -45,10 +46,12 @@ const pagination = combineReducers({
   })
 })
 
+
 const rootReducer = combineReducers({
   entities,
   pagination,
   errorMessage,
+  // language: languageProviderReducer,
 })
 
 export default rootReducer

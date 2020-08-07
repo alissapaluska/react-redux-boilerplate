@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import Explore from '../components/Explore'
+import LocaleToggle from '../containers/LocaleToggle'
 import { resetErrorMessage } from '../actions'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
@@ -31,6 +32,7 @@ class App extends Component {
     const { children, inputValue } = this.props
     return (
       <div>
+        {/* <LocaleToggle /> */}
         <Typography paragraph={true} variant={'body1'}>Move the DevTools with Ctrl+W or hide them with Ctrl+H.</Typography>
         <Explore value={inputValue} onChange={this.handleChange} />
         <hr />
